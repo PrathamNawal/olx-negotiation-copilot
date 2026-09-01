@@ -1,0 +1,459 @@
+[
+  {
+    "id": "TC-01",
+    "label": "Happy path",
+    "listing_text": "Apple iPhone 13 Pro Max Jade Green 256GB Box Kit\n₹ 44,444\nApple iPhone 13 Pro Max, 256GB, Jade Green. Excellent condition, no scratches, battery health 91%. Full box with charger. Bengaluru, posted 8 days ago.",
+    "budget": 40000.0,
+    "urgency": "Medium",
+    "dealbreakers": "",
+    "error_stage": null,
+    "error_message": null,
+    "asking_price": 44444.0,
+    "fair_price_low": 38000.0,
+    "fair_price_high": 48000.0,
+    "confidence_note": "medium – several comps, but wide price range",
+    "comps_count": 10,
+    "comps": [
+      {
+        "title": "iPhone 13 Pro Max 256GB Jade Green Box Kit",
+        "price": 39999.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro Max 256GB Jade Green Box Kit",
+        "price": 43500.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro Max 256GB Graphite",
+        "price": 48999.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro Max 256GB",
+        "price": 49999.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro Max 256GB",
+        "price": 42500.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro Max 256GB",
+        "price": 47500.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro Max 256GB",
+        "price": 45000.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro Max 256GB",
+        "price": 60000.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro 256GB",
+        "price": 22999.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "iPhone 13 Pro 256GB",
+        "price": 27999.0,
+        "source_note": "OLX listing"
+      }
+    ],
+    "opening_offer": 35000.0,
+    "walkaway_price": 40000.0,
+    "concession_ladder": [
+      36000.0,
+      37000.0
+    ],
+    "strategy_rationale": "Fair‑price research shows 38,000–48,000. The buyer’s max is 40,000, so we target below that. Starting at 35,000 gives room for 2–3 concessions (36k, 37k) while staying under the walk‑away of 40k.",
+    "rounds_run": 1,
+    "last_action": "accept",
+    "breaks_walkaway_flagged": false,
+    "transcript": [
+      {
+        "role": "agent_message",
+        "text": "Round 1 opening — offer ₹35,000."
+      },
+      {
+        "role": "seller_reply",
+        "text": "I can do rs40000. My phone is in new condition"
+      },
+      {
+        "role": "agent_message",
+        "text": "Round 1 decision — accept:  (reasoning: Seller is firm at ₹40,000, which matches our walk‑away price. No further concessions are likely, so accepting is the appropriate move.; breaks_walkaway=False)"
+      }
+    ],
+    "outcome": "deal_closed",
+    "final_price": 40000.0,
+    "savings_vs_ask": 4444.0,
+    "stop_reason": "Seller accepted firm price of ₹40,000, which matches our walk‑away threshold; no further negotiation needed.",
+    "next_action": "Proceed to payment and arrange pickup as agreed with the seller.",
+    "duration_sec": 57.1,
+    "price_movement_pct": 10.0
+  },
+  {
+    "id": "TC-02",
+    "label": "Edge: minimal input",
+    "listing_text": "Samsung phone, ₹8000, ok condition",
+    "budget": 6500.0,
+    "urgency": "Low",
+    "dealbreakers": "",
+    "error_stage": null,
+    "error_message": null,
+    "asking_price": 8000.0,
+    "fair_price_low": 7000.0,
+    "fair_price_high": 10000.0,
+    "confidence_note": "9 comps found, moderate confidence",
+    "comps_count": 8,
+    "comps": [
+      {
+        "title": "₹8,000",
+        "price": 8000.0,
+        "source_note": "OLX Sadabad listing"
+      },
+      {
+        "title": "₹2,000",
+        "price": 2000.0,
+        "source_note": "OLX Sadabad listing"
+      },
+      {
+        "title": "₹15,500",
+        "price": 15500.0,
+        "source_note": "OLX Sadabad listing"
+      },
+      {
+        "title": "₹92,000",
+        "price": 92000.0,
+        "source_note": "OLX Sadabad listing"
+      },
+      {
+        "title": "₹17,000",
+        "price": 17000.0,
+        "source_note": "OLX Sadabad listing"
+      },
+      {
+        "title": "₹9,500",
+        "price": 9500.0,
+        "source_note": "OLX Sadabad listing"
+      },
+      {
+        "title": "₹13,500",
+        "price": 13500.0,
+        "source_note": "OLX Sadabad listing"
+      },
+      {
+        "title": "₹1,24,999",
+        "price": 124999.0,
+        "source_note": "OLX Bengaluru listing"
+      }
+    ],
+    "opening_offer": 5500.0,
+    "walkaway_price": 6500.0,
+    "concession_ladder": [
+      5500.0,
+      5900.0,
+      6200.0,
+      6400.0
+    ],
+    "strategy_rationale": "The fair‑price range for this Samsung phone is ₹7,000–₹10,000, but the buyer’s maximum budget is ₹6,500. Anchoring at ₹5,500 gives a strong starting point well below the lower bound of the fair range, while still leaving a ₹1,000 concession window. The ladder allows 3 incremental increases (₹4,000, ₹3,000, ₹1,000) that keep the final offer below the walk‑away price of ₹6,500. With low urgency and no dealbreakers, the buyer can afford to be patient and hold the walk‑away until the seller agrees to the final offer or exceeds the budget.",
+    "rounds_run": 1,
+    "last_action": "walk_away",
+    "breaks_walkaway_flagged": false,
+    "transcript": [
+      {
+        "role": "agent_message",
+        "text": "Round 1 opening — offer ₹5,500."
+      },
+      {
+        "role": "seller_reply",
+        "text": "no less price, fix hai"
+      },
+      {
+        "role": "agent_message",
+        "text": "Round 1 decision — walk_away:  (reasoning: Seller has stated the price is fixed and is not willing to lower it. Since the next step in the ladder (₹5,900) is still below the walk‑away price, but the seller is not conceding, the best move is to walk away.; breaks_walkaway=False)"
+      }
+    ],
+    "outcome": "walked_away",
+    "final_price": null,
+    "savings_vs_ask": null,
+    "stop_reason": "Seller stated the price is fixed and refused to lower it, so we chose to walk away before reaching the walk‑away threshold.",
+    "next_action": "Search for a similar item at a lower asking price or wait for a better offer from another seller.",
+    "duration_sec": 79.8,
+    "price_movement_pct": null
+  },
+  {
+    "id": "TC-03",
+    "label": "Edge: maximal / complex input",
+    "listing_text": "Sony A7 III Mirrorless Camera Body + 28-70mm Kit Lens + 2 Batteries + Extra 64GB SD Card + Original Sony Bag\n₹ 98,000 (slightly negotiable)\nPurchased Jan 2023, bill available, under warranty till Jan 2026. Shutter count ~9,400. No fungus, no dead pixels, sensor cleaned professionally last month. Selling due to upgrade to A7 IV. Pune, can courier pan-India at buyer's cost or meet locally. Serious buyers only, no time-wasters.",
+    "budget": 90000.0,
+    "urgency": "High",
+    "dealbreakers": "Must include original bill and warranty card; no COD, bank transfer only after physical inspection",
+    "error_stage": null,
+    "error_message": null,
+    "asking_price": 98000.0,
+    "fair_price_low": 80000.0,
+    "fair_price_high": 90000.0,
+    "confidence_note": "Moderate confidence: 8 comps, range 80k-90k based on recent similar listings; higher prices likely include extras or better condition.",
+    "comps_count": 8,
+    "comps": [
+      {
+        "title": "Sony A7 III + 28‑70mm OSS",
+        "price": 48999.0,
+        "source_note": "OLX India listing"
+      },
+      {
+        "title": "Sony A7 III",
+        "price": 65000.0,
+        "source_note": "OLX Pune listing"
+      },
+      {
+        "title": "Sony A7 III + 28‑70mm kit",
+        "price": 75000.0,
+        "source_note": "OLX listing"
+      },
+      {
+        "title": "Sony A7III + 28‑70mm kit",
+        "price": 85999.0,
+        "source_note": "OLX Pune listing"
+      },
+      {
+        "title": "Standard Combo (A7III + kit)",
+        "price": 87499.0,
+        "source_note": "OLX Pune listing"
+      },
+      {
+        "title": "Sony A7III + 28‑70mm kit",
+        "price": 110000.0,
+        "source_note": "OLX Pune listing"
+      },
+      {
+        "title": "Sony A7 III Black used",
+        "price": 51500.0,
+        "source_note": "OLX Pune listing"
+      },
+      {
+        "title": "Sony A7 III with kit",
+        "price": 150000.0,
+        "source_note": "OLX listing"
+      }
+    ],
+    "opening_offer": 78000.0,
+    "walkaway_price": 90000.0,
+    "concession_ladder": [
+      78000.0,
+      82000.0,
+      86000.0,
+      90000.0
+    ],
+    "strategy_rationale": "Fair‑price research shows the A7 III kit should sell between ₹80,000–₹90,000. The seller’s asking ₹98,000 is above that. The buyer’s maximum budget is ₹90,000, so the walk‑away price is set at that limit. An opening offer of ₹78,000 anchors below the fair‑price range, giving room for 3 incremental concessions (₹82k, ₹86k) before reaching the budget ceiling.",
+    "rounds_run": 3,
+    "last_action": "counter",
+    "breaks_walkaway_flagged": false,
+    "transcript": [
+      {
+        "role": "agent_message",
+        "text": "Round 1 opening — offer ₹78,000."
+      },
+      {
+        "role": "seller_reply",
+        "text": "Thanks for the offer but 90k is too low for this kit, the lens alone is worth 30k new. Best I can do is 94000 if you pick up this week."
+      },
+      {
+        "role": "agent_message",
+        "text": "Round 1 decision — counter: I can offer ₹82,000 if you can pick up this week. (reasoning: Seller is firm at ₹94,000, which is above our walk‑away. We should try the next step up the ladder at ₹82,000 to see if they’ll budge.; breaks_walkaway=False)"
+      },
+      {
+        "role": "seller_reply",
+        "text": "Okay, meet me at 91000 final, aur kam nahi hoga."
+      },
+      {
+        "role": "agent_message",
+        "text": "Round 2 decision — counter: ₹86,000. I can do that if you can pick up this week. (reasoning: Seller is firm at ₹91,000, which is above our walk‑away. We still have a step in the ladder at ₹86,000, so we can try that as a counter offer.; breaks_walkaway=False)"
+      }
+    ],
+    "outcome": "not_terminated_within_eval_budget",
+    "duration_sec": 78.8,
+    "price_movement_pct": null
+  },
+  {
+    "id": "TC-04",
+    "label": "Niche / low-comp item",
+    "listing_text": "Yamaha RD350 1985 model, project bike, non-running\n₹ 1,85,000\nRD papers clear, single owner, engine needs rebuild, tank and side panels original paint, some rust on frame. Kolkata.",
+    "budget": 150000.0,
+    "urgency": "Low",
+    "dealbreakers": "Must have clear RC and no theft case",
+    "error_stage": null,
+    "error_message": null,
+    "asking_price": 185000.0,
+    "fair_price_low": 150000.0,
+    "fair_price_high": 200000.0,
+    "confidence_note": "Low – sparse comps, some mis‑listed or new‑bike prices.",
+    "comps_count": 5,
+    "comps": [
+      {
+        "title": "Yamaha RD350 1984",
+        "price": 999999.0,
+        "source_note": "OLX India listing"
+      },
+      {
+        "title": "Yamaha RD350 1986",
+        "price": 730000.0,
+        "source_note": "OLX India listing"
+      },
+      {
+        "title": "Yamaha RD350 1985",
+        "price": 800000.0,
+        "source_note": "OLX India listing"
+      },
+      {
+        "title": "Yamaha RD350 1985",
+        "price": 1200000.0,
+        "source_note": "OLX India listing"
+      },
+      {
+        "title": "Yamaha RD350 1985",
+        "price": 1500000.0,
+        "source_note": "OLX India listing"
+      }
+    ],
+    "opening_offer": 120000.0,
+    "walkaway_price": 150000.0,
+    "concession_ladder": [
+      120000.0,
+      130000.0,
+      140000.0,
+      150000.0
+    ],
+    "strategy_rationale": "The listing’s fair‑price range starts at ₹150,000, which matches the buyer’s max budget. Opening at ₹120,000 gives a strong anchor and allows three incremental concessions (₹130k, ₹140k, ₹150k) while staying within budget. With low urgency the buyer can hold until the seller meets the walk‑away price of ₹150,000.",
+    "rounds_run": 1,
+    "last_action": "walk_away",
+    "breaks_walkaway_flagged": false,
+    "transcript": [
+      {
+        "role": "agent_message",
+        "text": "Round 1 opening — offer ₹120,000."
+      },
+      {
+        "role": "seller_reply",
+        "text": "Bhai itna kam nahi hoga, ye rare bike hai. 1.75 tak soch sakta hoon, last price."
+      },
+      {
+        "role": "agent_message",
+        "text": "Round 1 decision — walk_away:  (reasoning: Seller has stated a firm price of ₹175,000, which is above the walk‑away price of ₹150,000. They are not indicating any willingness to lower the price.; breaks_walkaway=False)"
+      }
+    ],
+    "outcome": "walked_away",
+    "final_price": null,
+    "savings_vs_ask": null,
+    "stop_reason": "Seller set a firm price of ₹175,000, above the walk‑away threshold of ₹150,000, and showed no willingness to negotiate further.",
+    "next_action": "Continue searching for other listings or wait for a price drop on this bike.",
+    "duration_sec": 64.8,
+    "price_movement_pct": null
+  },
+  {
+    "id": "TC-05",
+    "label": "Stress test: Hinglish, messy formatting, aggressive seller",
+    "listing_text": "OnePlus 11R 5G 🔥🔥 16gb/256gb urgent sale!!\nprice 26k nego\nbilkul mint condition bro, 2 month old only, bill box sab hai, koi scratch nhi, cash preferred, Delhi NCR only pls",
+    "budget": 20000.0,
+    "urgency": "High",
+    "dealbreakers": "Cash on delivery only, no advance payment",
+    "error_stage": null,
+    "error_message": null,
+    "asking_price": 26000.0,
+    "fair_price_low": 23000.0,
+    "fair_price_high": 26000.0,
+    "confidence_note": "Moderate – many listings cluster around ₹20‑₹28 k; the ₹26 k ask sits near the upper end of the typical used‑market range.",
+    "comps_count": 10,
+    "comps": [
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 19999.0,
+        "source_note": "OLX Delhi listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 20000.0,
+        "source_note": "OLX Delhi listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 23599.0,
+        "source_note": "OLX Delhi listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 23999.0,
+        "source_note": "OLX Delhi listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 25000.0,
+        "source_note": "OLX Delhi listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 26000.0,
+        "source_note": "OLX Delhi listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 27500.0,
+        "source_note": "OLX Noida listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 28499.0,
+        "source_note": "OLX Delhi listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 22000.0,
+        "source_note": "OLX Noida listing"
+      },
+      {
+        "title": "OnePlus 11R 5G 16GB/256GB",
+        "price": 34999.0,
+        "source_note": "OLX Delhi fixed rate"
+      }
+    ],
+    "opening_offer": 17000.0,
+    "walkaway_price": 20000.0,
+    "concession_ladder": [
+      17000.0,
+      18000.0,
+      19000.0,
+      20000.0
+    ],
+    "strategy_rationale": "The listing is priced at ₹26,000, which is at the top of the fair‑price range (₹23,000‑₹26,000). The buyer’s max budget is ₹20,000, so we start below that at ₹17,000 to leave room for concessions. The ladder rises in ₹1,000 increments to meet the seller’s counter‑offers while staying within the walk‑away limit. This strategy keeps the buyer’s budget intact and gives a clear exit point if the seller refuses to meet ₹20,000.",
+    "rounds_run": 1,
+    "last_action": "walk_away",
+    "breaks_walkaway_flagged": false,
+    "transcript": [
+      {
+        "role": "agent_message",
+        "text": "Round 1 opening — offer ₹17,000."
+      },
+      {
+        "role": "seller_reply",
+        "text": "bhai 26 se ek rupya kam nahi hoga, chahiye to lo warna chhodo, bahut log line me hai"
+      },
+      {
+        "role": "agent_message",
+        "text": "Round 1 decision — walk_away:  (reasoning: Seller is firm at ₹26,000, which is well above our walk‑away price of ₹20,000. No concession ladder step reaches that level, so continuing would be futile.; breaks_walkaway=False)"
+      }
+    ],
+    "outcome": "walked_away",
+    "final_price": null,
+    "savings_vs_ask": null,
+    "stop_reason": "Seller is firm at ₹26,000, which is above the walk‑away price of ₹20,000. No concession ladder step reaches that level, so continuing would be futile.",
+    "next_action": "Consider looking for another listing or revisiting the price later if you find a better match.",
+    "duration_sec": 80.4,
+    "price_movement_pct": null
+  }
+]
