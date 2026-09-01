@@ -1,8 +1,6 @@
 .env
+evals/mlflow.db
+dashboard/data/versions.json
 __pycache__/
 *.pyc
-.DS_Store
-dashboard/data/
-.streamlit/secrets.toml
-venv/
-.venv/
+.pytest_cache/
