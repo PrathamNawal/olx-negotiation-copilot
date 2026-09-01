@@ -27,7 +27,7 @@ Buyers on OLX in India routinely overpay because negotiating well takes market r
 
 | Input | Type | Example | Required |
 |---|---|---|---|
-| OLX listing URL or pasted listing text | string | `https://www.olx.in/item/...` or pasted title+price+description | Yes |
+| Listing details, pasted as text | string | pasted title, price, and description, e.g. "Samsung Galaxy S21, ₹18,000, 1 year old, good condition" | Yes |
 | Buyer's max budget | integer (₹) | 14000 | Yes |
 | Urgency | enum (Low / Medium / High) | "Medium — want it within a week" | Yes |
 | Dealbreakers / must-haves | string | "must have original box and bill" | No |
@@ -42,9 +42,11 @@ Buyers on OLX in India routinely overpay because negotiating well takes market r
 | Suggested message (per turn) | plain text | exact message for the user to paste into the real OLX chat |
 | Final outcome message | structured text (see Section 4, step 8) | deal price / walk-away, savings vs. ask, reason for stopping, next action |
 
+*A bare OLX link isn't accepted as input — OLX blocks automated fetching, so the agent can't open a link on the user's behalf. This was originally scoped as "link or text" but corrected to text-only after a live-testing bug surfaced the gap between the two (see `README.md`, Shipping & reliability notes).*
+
 ## 4. Step-by-Step Workflow (Plain English)
 
-1. User pastes the OLX listing (link or text) into the web chat UI.
+1. User pastes the listing's title, price, and description as text into the web chat UI.
 2. Agent extracts listing details: asking price, condition, description, how long it's been posted.
 3. Agent searches for 5–10 comparable OLX listings to build a fair-price range, noting signals like "this one's been up 18 days" (room to negotiate) or "priced below comps already" (little room).
 4. Agent asks the user 2–3 quick questions: max budget, urgency, any dealbreakers.
@@ -52,7 +54,7 @@ Buyers on OLX in India routinely overpay because negotiating well takes market r
 6. Agent gives the user the first message to send; user copies it into the real OLX chat with the seller.
 7. User pastes the seller's real reply back into the agent's chat; agent reads it, updates its read on how flexible the seller seems, and decides: counter, hold, accept, or walk away — then gives the user the next message to send. This repeats for as many rounds as the real conversation takes.
 8. When the seller accepts, refuses to move further, or goes silent, the agent sends a final message stating the outcome: deal price (or best offer if walking away), savings vs. the original ask, why it stopped there, and what the user should do next.
-9. The outcome (product category, opening tactic used, how many rounds, what worked) is logged as a short, reusable lesson for that category of item, so the next negotiation the user runs starts smarter.
+9. The session ends there. In this version, each negotiation is independent — no lesson carries over to the next one. (A cross-session memory layer that compounds lessons across negotiations was part of the original concept but is explicitly out of scope for v1, per Section 6's single-session constraint; see Section 10 for the upgrade path.)
 
 ## 5. Success Metrics
 

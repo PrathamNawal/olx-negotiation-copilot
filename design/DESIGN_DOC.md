@@ -31,9 +31,9 @@ Framework: **Agno** (Python agent framework) · Stack: **Python + Streamlit** ·
 
 ```
 ┌─────────────────────────┐
-│ USER INPUT               │
-│ Pastes OLX listing        │
-│ (URL or text)             │
+│ USER INPUT                │
+│ Pastes listing title,     │
+│ price, description (text) │
 └────────────┬─────────────┘
              ▼
 ┌─────────────────────────────────┐
