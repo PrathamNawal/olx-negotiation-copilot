@@ -242,6 +242,7 @@ def run_quick_eval(version: dict, test_cases: list, trace: TraceFn = None) -> li
             round_number += 1
 
         r["rounds_run"] = round_number
+        r["reasoning_present"] = 1 if (move and move.reasoning and move.reasoning.strip()) else 0
 
         if move and move.action in ("accept", "walk_away"):
             summary = (

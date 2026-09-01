@@ -92,6 +92,7 @@ def get_version_comparison() -> pd.DataFrame:
                 "outcome_deal_closed": metrics.get("outcome_deal_closed"),
                 "comps_count": metrics.get("comps_count"),
                 "rounds_run": metrics.get("rounds_run"),
+                "reasoning_present": metrics.get("reasoning_present"),
                 "errored": metrics.get("errored"),
                 "duration_sec": metrics.get("duration_sec"),
                 "start_time": run.info.start_time,
@@ -99,7 +100,10 @@ def get_version_comparison() -> pd.DataFrame:
         )
     if not rows:
         return pd.DataFrame(
-            columns=["version", "n_runs", "avg_price_movement_pct", "deal_close_rate", "avg_duration_sec", "last_run"]
+            columns=[
+                "version", "n_runs", "avg_price_movement_pct", "deal_close_rate",
+                "avg_rounds_run", "reasoning_coverage_pct", "avg_duration_sec", "last_run",
+            ]
         )
     df = pd.DataFrame(rows)
     grouped = (
@@ -108,6 +112,8 @@ def get_version_comparison() -> pd.DataFrame:
             n_runs=("test_case", "count"),
             avg_price_movement_pct=("price_movement_pct", "mean"),
             deal_close_rate=("outcome_deal_closed", "mean"),
+            avg_rounds_run=("rounds_run", "mean"),
+            reasoning_coverage_pct=("reasoning_present", "mean"),
             avg_duration_sec=("duration_sec", "mean"),
             last_run=("start_time", "max"),
         )
@@ -115,7 +121,9 @@ def get_version_comparison() -> pd.DataFrame:
     )
     grouped["last_run"] = pd.to_datetime(grouped["last_run"], unit="ms")
     grouped["deal_close_rate"] = (grouped["deal_close_rate"] * 100).round(1)
+    grouped["reasoning_coverage_pct"] = (grouped["reasoning_coverage_pct"] * 100).round(1)
     grouped["avg_price_movement_pct"] = grouped["avg_price_movement_pct"].round(1)
+    grouped["avg_rounds_run"] = grouped["avg_rounds_run"].round(1)
     grouped["avg_duration_sec"] = grouped["avg_duration_sec"].round(1)
     return grouped.sort_values("last_run")
 

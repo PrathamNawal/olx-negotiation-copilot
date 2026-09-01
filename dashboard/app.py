@@ -463,6 +463,35 @@ elif page == "track":
             st.caption("This is the first scored version — no prior version to compare against yet.")
 
     st.divider()
+    st.markdown("**Success metrics vs. target** (from [`brief/AGENT_BRIEF.md`](https://github.com/PrathamNawal/olx-negotiation-copilot/blob/main/brief/AGENT_BRIEF.md) §5)")
+    if not before_after["has_data"]:
+        st.caption("Run an eval below to populate these against real data.")
+    else:
+        current = before_after["current"]
+        price_val = current.get("avg_price_movement_pct")
+        rounds_val = current.get("avg_rounds_run")
+        reasoning_val = current.get("reasoning_coverage_pct")
+
+        m1, m2, m3 = st.columns(3)
+        with m1:
+            st.metric("Price improvement", f"{price_val}%" if price_val is not None else "—", help="Target: ≥10% off asking on closed deals")
+            st.caption("✅ meets target" if (price_val or 0) >= 10 else "⚠️ below target")
+        with m2:
+            st.metric("Rounds to resolution", f"{rounds_val}" if rounds_val is not None else "—", help="Target: ≤5 rounds")
+            st.caption("✅ meets target" if (rounds_val or 99) <= 5 else "⚠️ above target")
+        with m3:
+            st.metric("Reasoning visibility", f"{reasoning_val}%" if reasoning_val is not None else "—", help="Target: 100% of agent turns carry a non-empty reasoning field")
+            st.caption("✅ meets target" if (reasoning_val or 0) >= 100 else "⚠️ below target")
+
+        m4, m5 = st.columns(2)
+        with m4:
+            st.metric("Strategy transparency", "Enforced by design")
+            st.caption("The Play flow requires the user to confirm opening offer + walk-away price before the first message sends — not a number that varies by version, so it isn't charted above.")
+        with m5:
+            st.metric("Reviewer comprehension", "Manual review")
+            st.caption("Demo-specific and judged by a human watching a session — see EVAL_SCORECARD.md §6 (PM Reflection), not something an automated metric can score.")
+
+    st.divider()
     n_cases = st.slider("How many real test cases to run for this eval", 1, 5, 2)
     if not keys_ready:
         st.info("Add your Groq and Serper API keys in the sidebar to run a live eval.")
@@ -486,6 +515,7 @@ elif page == "track":
                     "price_movement_pct": r.get("price_movement_pct"),
                     "comps_count": r.get("comps_count"),
                     "rounds_run": r.get("rounds_run"),
+                    "reasoning_present": r.get("reasoning_present"),
                     "outcome_deal_closed": 1 if r.get("outcome") == "deal_closed" else 0,
                     "errored": 1 if r.get("error_stage") else 0,
                     "duration_sec": r.get("duration_sec"),

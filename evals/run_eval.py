@@ -155,6 +155,9 @@ def run_one(tc: dict) -> dict:
     result["breaks_walkaway_flagged"] = (
         outcome_move.breaks_walkaway if outcome_move else None
     )
+    result["reasoning_present"] = (
+        1 if (outcome_move and outcome_move.reasoning and outcome_move.reasoning.strip()) else 0
+    )
     result["transcript"] = transcript
 
     # --- Phase 4: final outcome (only if negotiation actually terminated) ---
@@ -237,6 +240,8 @@ def main():
                     mlflow.log_metric("comps_count", r["comps_count"])
                 if r.get("rounds_run") is not None:
                     mlflow.log_metric("rounds_run", r["rounds_run"])
+                if r.get("reasoning_present") is not None:
+                    mlflow.log_metric("reasoning_present", r["reasoning_present"])
                 if pct is not None:
                     mlflow.log_metric("price_movement_pct", pct)
                 mlflow.log_metric("outcome_deal_closed", 1 if r.get("outcome") == "deal_closed" else 0)
